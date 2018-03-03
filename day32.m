@@ -1,0 +1,31 @@
+clc;
+clear all;
+n=[2 5 10 15];
+w=-pi:0.01:pi;
+for i=1:4
+	xw(i,:)=sin(w*(n(i)+1/2))./sin(w/2);
+end
+magx1=abs(xw(1,:));
+magx2=abs(xw(2,:));
+magx3=abs(xw(3,:));
+magx4=abs(xw(4,:));
+subplot(2,2,1);
+plot(w/pi,magx1);
+xlabel('w/pi');
+ylabel('magx1');
+title('Absolute magnitude for n=2');
+subplot(2,2,2);
+plot(w/pi,magx2);
+xlabel('w/pi');
+ylabel('magx2');
+title('Absolute magnitude for n=5');
+subplot(2,2,3);
+plot(w/pi,magx3);
+xlabel('w/pi');
+ylabel('magx3');
+title('Absolute magnitude for n=10');
+subplot(2,2,4);
+plot(w/pi,magx4);
+xlabel('w/pi');
+ylabel('magx4');
+title('Absolute magnitude for n=15');

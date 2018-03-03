@@ -1,0 +1,14 @@
+t=0:0.001:0.1;
+n=0:100
+a=5
+f=50
+x=a*cos(2*3.14*f*t);
+x1=a*cos((2*3.14*f*n)/1000);
+subplot(2,1,1);
+plot(t,x);
+xlabel('t');
+ylabel('x(t)');
+subplot(2,1,2);
+stem(n,x1);
+xlabel('n');
+ylabel('x(n)');

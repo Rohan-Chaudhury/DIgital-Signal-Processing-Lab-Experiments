@@ -1,0 +1,16 @@
+t=0:0.001:1;
+Ts=0.01;
+fs=1/Ts;
+x1=sin(20*pi*t);
+subplot(2,1,1);
+plot(t,x1);
+xlabel("time instance");
+ylabel("amplitude");
+title("analog signal");
+n=0:100;
+x2=sin(20*pi*n*Ts);
+subplot(2,1,2);
+stem(n,x2);
+xlabel("time instance");
+ylabel("amplitude");
+title("sampled signal");
